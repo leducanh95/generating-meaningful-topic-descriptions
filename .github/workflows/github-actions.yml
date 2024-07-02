@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-
+  workflow_dispatch:
 
 jobs:
   # Job 1: check coding style
@@ -34,7 +34,7 @@ jobs:
 
       - name: Check with flake8
         run: flake8 . --max-line-length=88 --extend-ignore=E402,D100,D401,D104
-
+        
     #   - name: Run unit tests
     #     run: |
     #       python --version
